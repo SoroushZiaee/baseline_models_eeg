@@ -1,0 +1,51 @@
+{
+  "transforms": [
+    {
+      "workers": [
+        {
+          "name": "psd"
+        },
+        {
+          "name": "wte"
+        }
+      ]
+    },
+    {
+      "workers": [
+        {
+          "name": "psd"
+        }
+      ]
+    },
+    {
+      "workers": [
+        {
+          "name": "wte"
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "model": "BalancedRandomForestClassifier"
+    },
+    {
+      "model": "XGBoost",
+      "objective": "binary:logistic"
+    },
+    {
+      "model": "GaussianNaiveBayes"
+    },
+    {
+      "model": "K-NearestNeighbores"
+    },
+    {
+      "model": "svm"
+    }
+  ],
+  "data_splitters": [
+    {
+      "data_splitter": "RepeatedStratifiedKFold"
+    }
+  ]
+}
